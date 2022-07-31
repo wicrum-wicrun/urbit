@@ -1401,6 +1401,9 @@
         ::  gall scry endpoint
         ::
         [%scry ~]
+        ::  internal name endpoint, returns ship @p
+        ::
+        [%name ~]
         ::  respond with the default file not found page
         ::
         [%four-oh-four ~]
