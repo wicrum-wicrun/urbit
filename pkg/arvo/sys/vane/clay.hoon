@@ -37,8 +37,10 @@
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 =/  bud
   ^~
+  =/  hash=@uw   (mix (mug ..zuse) zuse)
   =/  zuse=ming  |.(!>(..zuse))
   :*  zuse=zuse
+      hash=hash
       nave=(swat zuse !,(*hoon nave:clay))
       cork=(swat zuse !,(*hoon cork))
       same=(swat zuse !,(*hoon same))
@@ -206,8 +208,9 @@
 ::    recursively.
 ::
 +$  leak
-  $~  [*pour ~]
-  $:  =pour
+  $~  [0w0 *pour ~]
+  $:  zuse=@uw
+      =pour
       deps=(set leak)
   ==
 ::
@@ -1210,7 +1213,7 @@
       |=  [=mist next=$-(state [soak state])]
       ^-  [soak state]
       =^  top=(set leak)  stack.nub  stack.nub
-      =/  =leak  [(mist-to-pour mist) top]
+      =/  =leak  [hash.bud (mist-to-pour mist) top]
       =.  cycle.nub  (~(del in cycle.nub) mist)
       =?  stack.nub  ?=(^ stack.nub)
         stack.nub(i (~(put in i.stack.nub) leak))
@@ -4550,7 +4553,7 @@
             fod=flue-12
         ==
       +$  flue-12
-        [spill=(set leak) sprig=(map mist [=leak soak=soak-12])]
+        [spill=(set leak-12) sprig=(map mist [leak=leak-12 soak=soak-12])]
       +$  rung-12
         $:  rus=(map desk rede-12)
         ==
@@ -4563,7 +4566,12 @@
             pew=regs
             fiz=melt
         ==
-      +$  flow-12  (map leak [refs=@ud soak=soak-12])
+      +$  flow-12  (map leak-12 [refs=@ud soak=soak-12])
+      +$  leak-12
+        $~  [*pour ~]
+        $:  =pour
+            deps=(set leak-12)
+        ==
       +$  soak-12
         $%  [%cage =cage]
             [%vase =vase]
