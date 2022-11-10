@@ -6543,6 +6543,7 @@
   ==                                                    ::
 +$  tyre  (list [p=term q=hoon])                        ::
 +$  tyke  (list (unit hoon))                            ::
++$  ming  (trap vase)                                   ::  deferred vase
 ::                                                      ::::::  virtual nock
 +$  nock  $^  [p=nock q=nock]                           ::  autocons
           $%  [%1 p=*]                                  ::  constant
@@ -11484,11 +11485,33 @@
 ::  +swat: deferred +slap
 ::
 ++  swat
-  |=  [tap=(trap vase) gen=hoon]
-  ^-  (trap vase)
+  |=  [tap=ming gen=hoon]
+  ^-  ming
   =/  gun  (~(mint ut p:$:tap) %noun gen)
+  =>  [tap=tap gun=gun]
   |.  ~+
   [p.gun .*(q:$:tap q.gun)]
+::  +shed: deferred +slop
+::
+++  shed
+  |=  [hed=ming tal=ming]
+  ^-  ming
+  =/  cel  [%cell p:$:hed p:$:tal]
+  =>  [cel=cel hed=hed tal=tal]
+  |.  ~+
+  [cel [q:$:hed q:$:tal]]
+::  +shut: deferred +slam
+::
+++  shut
+  |=  [gat=ming sam=ming]
+  ^-  ming
+  =/  typ=type  [%cell p:$:gat p:$:sam]
+  =/  gen=hoon  [%cnsg [%$ ~] [%$ 2] [%$ 3] ~]
+  =/  gun  (~(mint ut typ) %noun gen)
+  =>  [hed=p.gun gat=gat sam=sam]
+  |.  ~+
+  ::  inline +slum
+  [hed .*(q:$:gat [%9 2 %10 [6 %1 q:$:sam] %0 1])]
 ::
 ::::  5d: parser
   ::

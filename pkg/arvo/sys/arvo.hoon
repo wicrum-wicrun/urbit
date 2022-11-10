@@ -19,6 +19,7 @@
 ::  $gang: infinite set of peers
 ::  $mark: symbolic content type
 ::  $mien: orientation
+::  $ming: deferred vase
 ::  $page: untyped cage
 ::  +omen: namespace path and data
 ::  $ship: network identity
@@ -200,9 +201,9 @@
       lac=?
       ver=(unit vere)
       fat=(unit (axal (cask)))
-      lul=(unit (trap vase))
-      zus=(unit (trap vase))
-      van=(map term (trap vase))
+      lul=(unit ming)
+      zus=(unit ming)
+      van=(map term ming)
   ==
 +$  heir
   $%  $:  %grub
@@ -1853,15 +1854,15 @@
               zuse/;;(@ud q:(slap zus limb/%zuse))
           ==
       =/  nav  %-  ~(run by van)
-               |=(a=(trap vase) (settle:va:part (slym $:a u.who)))
+               |=(a=ming (settle:va:part (slym $:a u.who)))
       :^  ~  arvo  *debt
       [[u.who now u.eny] [lac] [u.ver |] u.fat lul zus nav]
     ::
     ++  what
       =>  |%
           ++  smit
-            |=  [cap=tape sub=(trap vase) pax=path txt=@t]
-            ^-  (trap vase)
+            |=  [cap=tape sub=ming pax=path txt=@t]
+            ^-  ming
             ~>  %slog.[0 leaf/"{cap}: {(scow p+(mug txt))}"]
             %-  road  |.
             ~_  leaf/"{cap}: build failed"
